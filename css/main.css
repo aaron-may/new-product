@@ -1,0 +1,741 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #F2C4BC;
+  display: grid;
+  grid-template-columns: 0.7fr 0.7fr 1fr 0.7fr 0.7fr;
+  justify-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header h1 {
+  font-family: Playfair Display;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+header h2, header a {
+  font-family: Playfair Display;
+  align-self: center;
+  scroll-behavior: smooth;
+  transition: transform .2s;
+}
+
+header h2:hover {
+  transform: scale(1.3);
+}
+
+.page1 img {
+  height: 82vh;
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  padding-left: 3rem;
+}
+
+.page11 {
+  display:  grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows:  1fr 1fr 1fr;
+  height: 85vh;
+  background-image: url("anlagebg2.png");
+  background-attachment: fixed;
+}
+
+.page1 ul {
+  list-style: none;
+  grid-column: 2 / span 3;
+  grid-row: 2;
+  background-color: #F2D9BC;
+  text-align: right;
+  padding: 3rem;
+  font-family: Merriweather;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.page1 h3 {
+  font-family: Playfair Display;
+  font-weight: 900;
+  text-align: center;
+  font-size: 1.4rem;
+  grid-column: 2 / span 3;
+  grid-row: 2;
+  z-index: 5;
+}
+
+@media only screen and (min-width: 63em) {
+
+.page1 h3 {
+  font-size: 2.1rem;
+}
+
+.page1 ul {
+font-size: 2rem;
+line-height: 3rem;
+padding-top: 3.5rem;
+}
+
+.Story p {
+  line-height: 3rem;
+}
+
+.HowtoGet p, .HowtoGet h1 {
+  font-size: 2rem;
+}
+}
+
+@media only screen and (min-width: 80em) {
+
+.page1 h3 {
+  font-size: 3rem;
+  line-height: 4rem;
+}
+
+.page1 ul {
+font-size: 2.6rem;
+line-height: 4rem;
+padding-top: 4.5rem;
+}
+
+.Story p {
+  line-height: 4rem;
+}
+
+.HowtoGet p, .HowtoGet ul {
+  font-size: 2.6rem;
+}
+}
+
+.Story {
+height: 60vh;
+background: linear-gradient(0deg, rgba(237,201,49,1) 0%, rgba(242,196,176,1) 100%);
+}
+
+.Story h1 {
+  font-size: 2rem;
+  font-family: Playfair Display;
+  font-weight: 900;
+  text-align: center;
+  padding: 1.5rem;
+  padding-top: 1rem;
+}
+
+.Story p {
+text-indent: 40px;
+padding: 0 1.5rem 1.5rem 1.5rem;
+font-family: Merriweather;
+font-size: 1.2rem;
+line-height: 3rem;
+align-content: center;
+}
+
+.HowtoGet {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 60vh;
+}
+
+.HowtoGet h1 {
+  grid-column: 1 / span 2;
+  text-align: center;
+  font-family: Playfair Display;
+  font-weight: 900;
+}
+
+.HowtoGet p {
+  grid-column:  1;
+  padding-left: 2.5rem;
+  font-family: Merriweather;
+  font-size: 1.6rem;
+}
+
+.HowtoGet ul {
+  list-style:  none;
+  grid-column: 1;
+  padding-left: 2.5rem;
+  font-family: Merriweather;
+  font-size: 1.6rem;
+}
+
+.HowtoGet img {
+  height: 50vh;
+  grid-column: 2;
+  grid-row: 2 / span 4;
+}
+
+.HowtoGet button {
+  background: linear-gradient(180deg, rgba(235,197,179,1) 0%, rgba(232,201,82,1) 100%);
+  font-family: Playfair Display;
+  width: 8rem;
+  margin-left: 2.5rem;
+}
+
+
+.FAQHeader {
+  background: linear-gradient(180deg, rgba(237,201,49,1) 0%, rgba(112,213,116,1) 100%);
+}
+
+.FAQHeader h1 {
+  text-align: center;
+  padding: 1rem;
+  font-family: Playfair Display;
+  font-weight: 900;
+}
+
+.FAQ {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 30vh;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(241,218,214,1) 100%);
+}
+
+.FAQ p {
+  text-align: center;
+}
+
+.faq1, .faq3, .faq5 {
+  font-size: 1.5rem;
+}
+
+.faq1 {
+  grid-row: 1;
+  grid-column: 1;
+  font-family: Playfair Display;
+  font-weight: 900;
+  padding-left: 2rem;
+}
+
+.faq2 {
+  grid-row: 2;
+  grid-column: 1;
+  font-family: Merriweather;
+  padding-left: 1rem;
+}
+
+.faq3 {
+  grid-row: 1;
+  grid-column: 3;
+  font-family: Playfair Display;
+  font-weight: 900;
+}
+
+.faq4 {
+  grid-row: 2;
+  grid-column: 3;
+  font-family: Merriweather;
+  padding-right: 1rem;
+}
+
+.faq5 {
+  grid-row: 1;
+  grid-column: 2;
+  font-family: Playfair Display;
+  font-weight: 900;
+}
+
+.faq6 {
+  grid-row: 2;
+  grid-column: 2;
+  font-family: Merriweather;
+}
+
+.mailinglist {
+  height: 60vh;
+  display: grid;
+  background: linear-gradient(0deg, rgba(112,213,213,1) 0%, rgba(112,213,116,1) 100%);
+}
+
+.mailinglist p, .mailinglist h1 {
+  text-align: center;
+  padding: 1rem;
+}
+
+.mailinglist h1 {
+  font-family: Playfair Display;
+  font-weight: 900;
+  padding-top: 0;
+}
+
+.mailinglist p {
+  font-family: Merriweather;
+  font-size: 1.2rem;
+}
+
+.mailinglist button {
+  font-family: Playfair Display;
+}
+
+.mailinglist input {
+  height: 3rem;
+  padding: 0.5rem 5rem 0.5rem 5rem;
+  text-align: left;
+}
+
+.form-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 4rem;
+  align-self: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.form-input button {
+  font-family: Playfair Display;
+  background: linear-gradient(180deg, rgba(235,197,179,1) 0%, rgba(232,201,82,1) 100%);
+  padding: 0.5rem 2.5rem 0.5rem 2.5rem;
+  font-size: 1.5rem;
+  transition: transform .07s;
+  align-self: center;
+}
+
+button:hover {
+  background: linear-gradient(180deg, rgba(245,228,219,1) 0%, rgba(233,214,136,1) 100%);
+}
+
+button:active {
+  transform: scale(0.98)
+}
+
+form {
+  display: grid;
+  justify-items: center;
+  justify-self: center;
+  text-align: center;
+}
+
+footer {
+  background-color: #F2C4BC;
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr 0.3fr 0.3fr 0.3fr;
+  justify-items: center;
+  align-items: center;
+}
+
+footer p {
+  font-family: Merriweather;
+  padding-left: 0.5rem;
+}
+
+footer h1 {
+  font-size: 3rem;
+  padding: 0rem;
+  margin: 0.25rem;
+  grid-column: 2;
+}
+
+footer img {
+  color: #ffffff;
+  width: 75%;
+  height: auto;
+  transition: transform .2s;
+}
+
+.twitter {grid-column: 4;}
+.insta {grid-column: 5;}
+.facebook {grid-column: 6;}
+
+.social img:hover {
+  transform: scale(1.2) rotate(2deg);
+}
+
+@media only screen and (max-width: 50em) {
+header {
+grid-template-columns: 1fr;
+}
+
+header h2 {
+  display: none;
+  }
+
+.page1 {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 0.5fr 0.5fr;
+  justify-content: center;
+  height: 124vh;
+}
+
+.page1 img {
+  padding: 0;
+}
+
+.page1 h3 {
+  grid-column: 1;
+  grid-row: 4;
+  padding: 0.5rem;
+  background-color: #F2D9BC;
+}
+
+.page1 ul {
+  grid-column: 1;
+  grid-row: 5;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 3rem;
+}
+
+.Story h1 {
+  padding-bottom: 0.5rem;
+}
+
+.Story p {
+  line-height: 2rem;
+}
+
+.HowtoGet {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.HowtoGet img {
+display: none;
+}
+
+.HowtoGet p, .HowtoGet ul {
+  text-align: center;
+  font-family: Merriweather;
+  justify-items: center;
+  padding: 0;
+}
+
+.HowtoGet button {
+  grid-row: 6;
+  margin-top: 3rem;
+  width: 10rem;
+  padding: 1rem;
+  transition: transform .07s;
+  justify-self: center;
+  margin-left: 0;
+}
+
+.FAQ {
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+grid-template-columns: 1fr;
+}
+
+.faq1 {
+  grid-row: 1;
+}
+
+.faq2 {
+  grid-row: 2;
+}
+
+.faq3 {
+  grid-row: 3;
+}
+
+.faq4 {
+  grid-row: 4;
+}
+
+.faq5 {
+  grid-row: 5;
+}
+
+.faq6 {
+  grid-row: 6;
+}
+
+.faq1, .faq2, .faq3, .faq4, .faq5, .faq6 {
+  grid-column: 1;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+}
+
+.mailinglist {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.form-input {
+  grid-template-columns: 1fr;
+}
+
+.mailinglist button {
+  margin-top: 1rem;
+}
+
+footer {
+  grid-template-columns: 1.3fr 1fr 0.7fr 0.3fr 0.3fr 0.3fr;
+}
+
+footer img {
+  width: 75%;
+}
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+

@@ -1,0 +1,10 @@
+/* hide form label */
+.form-input label {
+	position: absolute;
+	left: -99999px;
+}
+
+/* class used by JS to hide form elements */
+.hide {
+  display: none;
+}
